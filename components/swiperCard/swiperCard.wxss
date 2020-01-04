@@ -72,3 +72,4 @@
 .cardItemActive .wrapper{
   /* transform: translateY(-50rpx) */
 }
+

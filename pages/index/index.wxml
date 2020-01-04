@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="container">
-  <text class='greeting'>早上好，</text>
-  <text class='name'>沈一四</text>
+  <text class='greeting'>{{welcomeText}}，</text>
+  <text class='name'>{{userInfo.nickName || ''}}</text>
 
   <swiper
     class='swiperWrapper'
