@@ -1,0 +1,43 @@
+<!--index.wxml-->
+<view class="container">
+  <text class='greeting'>早上好，</text>
+  <text class='name'>沈一四</text>
+
+  <swiper
+    class='swiperWrapper'
+    next-margin='100rpx'
+    current='{{activeSwpierIndex}}'
+    bindchange='handleSwiperChange'
+  >
+    <swiper-item
+      wx:for='{{swiperData}}'
+      wx:key='{{item.key}}'
+    >
+    <view>
+      <swiper-card
+        wx:if='{{activeSwpierIndex === index}}'
+        className='cardItemActive'
+        title='{{item.depart}} -> {{item.arrival}}'
+        date='{{item.departDate}} ~ {{item.arrivalDate}}'
+      ></swiper-card>
+      <swiper-card
+        wx:else
+        title='{{item.depart}} -> {{item.arrival}}'
+        date='{{item.departDate}} ~ {{item.arrivalDate}}'
+      ></swiper-card>
+    </view>
+    </swiper-item>
+  </swiper>
+
+  <div class='partners'>
+    <text class='title'>已加入的小伙伴</text>
+    <div class='avatarWrapper'>
+      <div class='avatar'></div>
+      <div class='avatar'></div>
+      <div class='avatar'></div>
+      <button class='avatar btn-add'>+</button>
+    </div>
+  </div>
+
+  <button class='btn-add-fixed'>+</button>
+</view>

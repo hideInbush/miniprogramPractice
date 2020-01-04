@@ -1,0 +1,18 @@
+<!--components/swiperCard/swiperCard.wxml-->
+<view class='cardItem {{className}}'>
+  <div class='wrapper'>
+    <div class='cover'></div>
+
+    <div class="btns">
+      <button class='btn'></button>
+      <button class='btn'></button>
+    </div>
+
+    <text class='title'>{{title}}</text>
+    <text class='date'>{{date}}</text>
+
+    <div class='progress'>
+      <div class='progress-bar'></div>
+    </div>
+  </div>
+</view>
